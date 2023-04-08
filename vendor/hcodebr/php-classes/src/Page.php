@@ -38,9 +38,12 @@ class Page
 
 	private function setData($data = array())
 	{
-		foreach ( $data as $key => $value)
+
+		foreach ($data as $key => $value) 
 		{
+
 			$this->tpl->assign($key, $value);
+
 		}
 	}
 

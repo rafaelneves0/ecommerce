@@ -11,7 +11,7 @@ class Model {
 		$fieldName = substr($name, 3, strlen($name));
 		
 		switch ($method) {
-			case 'gat':
+			case 'get':
 				return $this->values[$fieldName];
 			break;
 

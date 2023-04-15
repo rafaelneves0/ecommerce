@@ -1,1 +1,1 @@
-<?php if(!class_exists('Rain\Tpl')){exit;}?><li><a href="/categories/6">Andorid</a></li><li><a href="/categories/2">Apple</a></li><li><a href="/categories/4">Motorola</a></li><li><a href="/categories/5">Samsung</a></li>
+<?php if(!class_exists('Rain\Tpl')){exit;}?><li><a href="/categories/6">Andorid</a></li><li><a href="/categories/2">Apple</a></li><li><a href="/categories/8">Motorola</a></li><li><a href="/categories/9">Notebook</a></li><li><a href="/categories/5">Samsung</a></li><li><a href="/categories/10">SmartTV</a></li><li><a href="/categories/7">Xiaomi</a></li>

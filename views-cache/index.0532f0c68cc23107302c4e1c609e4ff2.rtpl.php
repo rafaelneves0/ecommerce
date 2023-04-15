@@ -3,12 +3,12 @@
 <!-- Content Header (Page header) -->
 <section class="content-header">
   <h1>
-    Page Header
-    <small>Optional description</small>
+    Bem-Vindo
+    <small>NOME DO USUARIO</small>
   </h1>
   <ol class="breadcrumb">
-    <li><a href="#"><i class="fa fa-dashboard"></i> Level</a></li>
-    <li class="active">Here</li>
+    <i class="fa fa-dashboard"></i>      
+    <li class="active">Home</li>
   </ol>
 </section>
 

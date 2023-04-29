@@ -11,7 +11,6 @@ $app->get('/admin', function() {
 
     $page->setTpl("index");
     
-    
 });
 
 $app->get('/admin/login', function() {

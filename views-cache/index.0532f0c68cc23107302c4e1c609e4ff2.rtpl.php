@@ -4,7 +4,7 @@
 <section class="content-header">
   <h1>
     Bem-Vindo
-    <small>NOME DO USUARIO</small>
+    <small><?php echo htmlspecialchars( $user["desperson"], ENT_COMPAT, 'UTF-8', FALSE ); ?></small>
   </h1>
   <ol class="breadcrumb">
     <i class="fa fa-dashboard"></i>      

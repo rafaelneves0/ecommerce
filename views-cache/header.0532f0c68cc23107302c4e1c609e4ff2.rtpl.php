@@ -58,7 +58,7 @@ desired effect
   <header class="main-header">
 
     <!-- Logo -->
-    <a href="/res/admin/index2.html" class="logo">
+    <a href="/admin" class="logo">
       <!-- mini logo for sidebar mini 50x50 pixels -->
       <span class="logo-mini"><b>UB</b>A</span>
       <!-- logo for regular state and mobile devices -->
@@ -82,7 +82,7 @@ desired effect
                 <img src="/res/admin/dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
 
                 <p>
-                  NOME DO USUARIO
+                  <?php echo htmlspecialchars( $user["desperson"], ENT_COMPAT, 'UTF-8', FALSE ); ?>
                   <small></small>
                 </p>
               </li>
@@ -114,13 +114,13 @@ desired effect
           <img src="/res/admin/dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
         </div>
         <div class="pull-left info">
-          <p>NOME DO USUARIO</p>
+          <p><?php echo htmlspecialchars( $user["desperson"], ENT_COMPAT, 'UTF-8', FALSE ); ?></p>
           <!-- Status -->
-          <i class="fa fa-user"></i> Login
+          <i class="fa fa-qq"></i> <?php echo htmlspecialchars( $user["deslogin"], ENT_COMPAT, 'UTF-8', FALSE ); ?>
         </div>
       </div>
 
-      <!-- search form (Optional) -->
+      <!-- search form (Optional) 
       <form action="#" method="get" class="sidebar-form">
         <div class="input-group">
           <input type="text" name="q" class="form-control" placeholder="Search...">
@@ -129,18 +129,19 @@ desired effect
                 </button>
               </span>
         </div>
-      </form>
+      </form>-->
       <!-- /.search form -->
 
       <!-- Sidebar Menu -->
       <ul class="sidebar-menu">
-        <li class="header">HEADER</li>
+        <li class="header">MENU</li>
         <!-- Optionally, you can add icons to the links -->
+        <li><a href="/admin"><i class="fa fa-home"></i> <span>Inicio</span></a></li>
         <li><a href="/admin/users"><i class="fa fa-users"></i> <span>Usuários</span></a></li>
         <li><a href="/admin/categories"><i class="fa fa-archive"></i> <span>Categorias</span></a></li>
         <li><a href="/admin/products"><i class="fa fa-shopping-basket"></i> <span>Produtos</span></a></li>
         <li class="treeview">
-          <a href=""><i class="fa fa-link"></i> <span>Meus Acessos</span>
+          <a ><i class="fa fa-cog"></i> <span>Configurações</span>
             <span class="pull-right-container">
               <i class="fa fa-angle-left pull-right"></i>
             </span>

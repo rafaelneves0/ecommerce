@@ -2,7 +2,8 @@
 
 namespace Hcode;
 use Rain\Tpl;
-
+use \Hcode\PageAdmin;
+use \Hcode\Model\User;
 
 class Page
 {
@@ -29,6 +30,8 @@ class Page
 
 
 		$this->tpl = new Tpl;
+
+		if (isset($_SESSION[User::SESSION])) $this->tpl->assign("user", $_SESSION[User::SESSION]);
 
 		$this->setData($this->options["data"]);
 
@@ -62,6 +65,8 @@ class Page
 		if($this->options["footer"] === true) $this->tpl->draw("footer");
 
 	}
+
+
 
 
 }

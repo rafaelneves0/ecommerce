@@ -10,6 +10,7 @@ use \Hcode\Model\Cart;
 class User extends Model{
 
 	const SESSION = "User";
+	const ERROR = "UserError";
 	const SECRET = "HcodePhp7_Secret";
 	const SECRET_IV = "HCPhp7_Secret_IV";
 
@@ -69,7 +70,7 @@ class User extends Model{
 
 		if (count($results) === 0)
 		{
-			throw new \Exception("Sem resultado");
+			throw new \Exception("Login ou Senha incorreto!");
 		}
 
 		$data = $results[0];
@@ -88,7 +89,7 @@ class User extends Model{
 			return $user;
 
 		} else {
-			throw new \Exception("BO na validação");
+			throw new \Exception("Login ou Senha incorreto!");
 		}
 
 	}
@@ -168,7 +169,7 @@ class User extends Model{
 
 		$sql = new Sql();
 
-		$results = $sql->select("CALL sp_usersupdate_save(:iduser, :desperson, :deslogin, :despassword, :desemail, :nrphone, :inadmin)", array(
+		$results = $sql->select("CALL sp_usersupdate_save(:iduser, :desperson, :deslogin, :despassword, :desemail, :nrphone, :inadmin)", [
 			":iduser"=>$this->getiduser(),
 			":desperson"=>utf8_decode($this->getdesperson()),
 			":deslogin"=>$this->getdeslogin(),
@@ -176,7 +177,7 @@ class User extends Model{
 			":desemail"=>$this->getdesemail(),
 			":nrphone"=>$this->getnrphone(),
 			":inadmin"=>$this->getinadmin()
-		));
+		]);
 
 		$this->setData($results[0]);		
 
